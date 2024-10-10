@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time"></div>
+
+    <script>
+        let days=["Sunday","Monday","Tuesday","Wednesday","Thusday","Friday","Saturday"];
+        let d=new Date();
+        let day=d.getDay();
+        let hou=d.getHours();
+        let min=d.getMinutes();
+        let sec=d.getSeconds();
+        let x;
+        if(hou>=12){
+            x="PM";
+        }
+        else{
+            x="AM";
+        }
+        document.getElementById("time").innerHTML="<h1> Today is : "+days[day]+"<br>"+" Current time is : "+hou+ x+" : "+min+" : "+sec +"</h1>";
+    </script>
+</body>
+</html>
