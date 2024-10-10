@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Physics Marks <input type="number" id="pm">
+    <br>
+    Enter Chemistry Marks <input type="number" id="cm">
+    <br>
+    Enter Math Marks <input type="number" id="mm">
+    <br>
+    Enter English Marks <input type="number" id="em">
+   <br>
+   <button onclick="calu()">Calculate</button>
+
+   <div id="ans"></div>
+
+   <script>
+    function calu(){
+  let phy=Number(document.getElementById("pm").value);
+  let che=Number(document.getElementById("cm").value);
+  let math=Number(document.getElementById("mm").value);
+  let eng=Number(document.getElementById("em").value);
+
+
+  let totalmarks=phy+che+math+eng;
+  let per=totalmarks/400*100;
+
+  document.getElementById("ans").innerHTML="<h1> total marks "+totalmarks+"<br> percentage " +per+ "% </h1> ";
+    }
+   </script>
+</body>
+</html>
